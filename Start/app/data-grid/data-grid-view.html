@@ -1,0 +1,33 @@
+<div>
+	<h2>Data grid</h2>
+	<table>
+		<thead>
+			<tr>
+				<th *ngFor="#column of columnDefinitions" 
+					(click)="order(column.propertyName)" 
+					[hidden]="!column.visible">
+					<span>{{column.displayName}}</span>
+				</th>
+			</tr>
+			<tr>
+				<th *ngFor="#column of columnDefinitions" 
+					[hidden]="!column.visible">
+					<input type="text" 
+						[(ngModel)]="searchCriterias[column.propertyName]" />
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="#item of items" [hidden]="filter(item)">
+				<td *ngFor="#column of columnDefinitions" [hidden]="!column.visible">
+					<span [ngClass]="column.applyClasses(item[column.propertyName], item)">
+						{{column.formatValue(item[column.propertyName])}}
+					</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<button (click)="clearFilters()">Clear filters</button>
+	<button (click)="test()">ZZZ</button>
+</div>

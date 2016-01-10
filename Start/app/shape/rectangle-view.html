@@ -1,0 +1,14 @@
+<!-- <svg width="100%" height="100%">
+	<rect width="100%" height="100%" fill="gray"></rect>
+	<text x="20" y="40">Example SVG text 1</text>
+</svg> -->
+<div>
+	<div>
+		<h2>{{heading}}</h2>
+		<button (click)="toggleList()">V</button>
+	</div>
+	<ul [hidden]="!opened">
+		<li *ngFor="#item of items">{{item}}</li>
+	</ul>
+</div>
+

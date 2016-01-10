@@ -1,0 +1,29 @@
+<div>
+	<h2>Test editor</h2>
+
+	<!--     <svg width="200" height="200"><rect width="100%" height="100%" fill="gray"></rect><foreignObject width="100%" height="100%"><body xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml" style="color:blue;">{{text}}</div></body></foreignObject>
+			<text x="20" y="20">regular box</text>
+	    </svg> -->
+<!-- 	<svg width="500" height="500">
+		<ce-rectangle></ce-rectangle>
+	</svg> -->
+
+	<!-- <ce-rectangle [items]="myItems" [heading]="'My list'"></ce-rectangle> -->
+	<hr>
+	<data-grid [items]="myObjects" [column-definitions]="columnDefinitions"></data-grid>
+	<hr>
+	<button (click)="testAdd()">Add to data grid</button>
+	<hr>
+	<tab-control>
+		<tab heading="First heading" active="true">
+			<div>Some content 1</div>
+		</tab>
+		<tab heading="Second heading" active="false">
+			<div>Some content 2</div>
+		</tab>
+		<tab heading="Third heading" active="false">
+			<div>Some content 3</div>
+		</tab>
+	</tab-control>
+
+</div>
