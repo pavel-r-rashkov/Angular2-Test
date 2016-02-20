@@ -26,17 +26,20 @@ System.register(['angular2/core', 'angular2/common'], function(exports_1) {
                 Rectangle.prototype.toggleList = function () {
                     this.opened = !this.opened;
                 };
+                Rectangle.prototype.changeSize = function () {
+                    this.recX += 10;
+                };
                 __decorate([
-                    core_1.Input('items'), 
-                    __metadata('design:type', Array)
-                ], Rectangle.prototype, "items", void 0);
+                    core_1.Input('recX'), 
+                    __metadata('design:type', Object)
+                ], Rectangle.prototype, "recX", void 0);
                 __decorate([
-                    core_1.Input('heading'), 
-                    __metadata('design:type', String)
-                ], Rectangle.prototype, "heading", void 0);
+                    core_1.Input('recY'), 
+                    __metadata('design:type', Object)
+                ], Rectangle.prototype, "recY", void 0);
                 Rectangle = __decorate([
                     core_1.Component({
-                        selector: 'ce-rectangle',
+                        selector: 'g[ce-rectangle]',
                         templateUrl: '/app/shape/rectangle-view.html',
                         directives: [common_1.CORE_DIRECTIVES],
                         styles: []

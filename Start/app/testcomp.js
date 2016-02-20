@@ -33,6 +33,7 @@ System.register(['angular2/core', '../app/shape/rectangle-component', '../app/da
         execute: function() {
             TestComp = (function () {
                 function TestComp() {
+                    this.rectangleX = 25;
                     this.myItems = [
                         'Something 1',
                         'Something 2',
@@ -68,7 +69,12 @@ System.register(['angular2/core', '../app/shape/rectangle-component', '../app/da
                     ];
                 }
                 TestComp.prototype.testAdd = function () {
+                    console.log('In test add');
                     this.myObjects.push({ ab: 'test', bc: 'test2' });
+                };
+                TestComp.prototype.changeSize = function () {
+                    console.log('change size');
+                    this.rectangleX += 10;
                 };
                 TestComp = __decorate([
                     core_1.Component({

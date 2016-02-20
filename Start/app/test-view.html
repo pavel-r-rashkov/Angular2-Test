@@ -10,7 +10,8 @@
 
 	<!-- <ce-rectangle [items]="myItems" [heading]="'My list'"></ce-rectangle> -->
 	<hr>
-	<data-grid [items]="myObjects" [column-definitions]="columnDefinitions"></data-grid>
+
+	<!-- <data-grid [items]="myObjects" [column-definitions]="columnDefinitions"></data-grid>
 	<hr>
 	<button (click)="testAdd()">Add to data grid</button>
 	<hr>
@@ -24,6 +25,16 @@
 		<tab heading="Third heading" active="false">
 			<div>Some content 3</div>
 		</tab>
-	</tab-control>
+	</tab-control> -->
+	
+	<hr>
+	
+	<svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+		<g ce-rectangle [recX]="rectangleX" [recY]="50"></g> 
+		
+	</svg> 
 
+	<button (click)="changeSize()">Click</button>
+
+	
 </div>

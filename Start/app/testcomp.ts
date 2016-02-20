@@ -16,8 +16,11 @@ export class TestComp {
 	myObjects: any[];
 	columnDefinitions: IColumnDefinition[];
 
+	rectangleX: number;
+
 
 	constructor() {
+		this.rectangleX = 25;
 		this.myItems = [
 			'Something 1',
 			'Something 2',
@@ -58,7 +61,14 @@ export class TestComp {
 	}
 
 	testAdd() {
+		console.log('In test add');
 		this.myObjects.push({ ab: 'test', bc: 'test2' });
+	}
+
+
+	changeSize() {
+		console.log('change size');
+		this.rectangleX += 10;
 	}
 
 }
